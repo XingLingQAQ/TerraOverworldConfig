@@ -5,11 +5,11 @@ extrusions:
       type: CELLULAR
       return: CellValue
       salt: 1252
-      frequency: 1 / ${meta.yml:biome-distribution.cave-biome-scale} / ${meta.yml:biome-distribution.global-scale}
+      frequency: 1 / ${substratum_meta.yml:biome-distribution.cave-biome-scale} / ${substratum_meta.yml:biome-distribution.global-scale}
     to:
       - SELF: 6
       - LUSH_CAVES: 1
       - DRIPSTONE_CAVES: 1
     range:
-      min: -16
-      max: 48
+      min: ${substratum_meta.yml:biome-distribution.cave-biome-min}
+      max: ${substratum_meta.yml:biome-distribution.cave-biome-max}
